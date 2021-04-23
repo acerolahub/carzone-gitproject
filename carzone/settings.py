@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',                    # phil_5: when we do a pip install django-ckeditor
+    'django.contrib.humanize',      # phil_6:
 ]
 
 MIDDLEWARE = [
