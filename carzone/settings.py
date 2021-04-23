@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',     # phil_1: that's come from pages/apps.py/PagesConfig
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',                    # phil_5: when we do a pip install django-ckeditor
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,8 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'carzone_db',   
-        'USER': 'postgres',    
+        'NAME': 'carzone_db',
+        'USER': 'postgres',
         'PASSWORD': 'gabi',
         'HOST': 'localhost',
     }
@@ -132,4 +134,3 @@ STATICFILES_DIRS = [
 # Media settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
- 
