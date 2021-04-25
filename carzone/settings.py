@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'dashboard'
+
 
 # Application definition
 
@@ -42,6 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',                    # phil_5: when we do a pip install django-ckeditor
     'django.contrib.humanize',      # phil_6:
+    'django.contrib.sites',         # phil_7
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # Providers
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +151,5 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+SITE_ID = 1

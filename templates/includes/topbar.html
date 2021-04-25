@@ -14,11 +14,10 @@
                   <li>
                       <a href="{% url 'dashboard' %}" class="sign-in"><i class="fa fa-sign-in"></i> Dashboard</a>
                   </li>
-
                   <li>
-                      <a href="javascript:{document.getElementById('logout').submit()}" class="sign-out"><i class="fa fa-sign-out"></i> Logout</a>
                       <form action="{% url 'logout' %}" method="POST" id='logout'>
                           {% csrf_token %}
+                          <a href="javascript:{document.getElementById('logout').submit()}" class="sign-in"><i class="fa fa-sign-out"></i> Logout</a>
                           <input type="hidden">
                       </form>
                   </li>

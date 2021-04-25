@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('pages.urls')),  # phil_3: to create a home html url
     path('cars/', include('cars.urls')),
     path('accounts/', include('accounts.urls')),
+    path('socialaccounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
